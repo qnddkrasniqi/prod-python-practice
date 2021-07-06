@@ -10,6 +10,10 @@ def delete_entry_text():
     entry.delete(0, tk.END)
 
 
+def insert_text():
+    entry.insert(0, 'Python')
+
+
 window = tk.Tk()
 
 label = tk.Label(master=window, text='Name')
@@ -27,9 +31,16 @@ delete_btn = tk.Button(
     command=delete_entry_text
 )
 
+insert_btn = tk.Button(
+    master=window,
+    text='Insert Text',
+    command=insert_text
+)
+
 label.pack()
 entry.pack()
 button.pack()
 delete_btn.pack()
+insert_btn.pack()
 
 window.mainloop()
